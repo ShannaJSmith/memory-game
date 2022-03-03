@@ -1,9 +1,11 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ card, choice, flipped }) => {
+const Card = ({ card, choice, flipped, disabled }) => {
   const handleClick = () => {
-    choice(card);
+    if (!disabled) {
+      choice(card);
+    }
   };
   return (
     <div className="card" key={card.id}>
