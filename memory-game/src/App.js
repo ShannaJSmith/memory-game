@@ -29,9 +29,9 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
   };
-
+  // to make a card selection
   const choice = (card) => {
-    console.log(card);
+    firstChoice ? setSecondChoice(card) : setFirstChoice(card);
   };
 
   return (
