@@ -3,15 +3,15 @@ import './App.css';
 import Card from './components/Card';
 
 const images = [
-  { src: 'images/brook.png' },
-  { src: 'images/chopper.png' },
-  { src: 'images/franky.png' },
-  { src: 'images/luffy.png' },
-  { src: 'images/nami.png' },
-  { src: 'images/robin.png' },
-  { src: 'images/sanji.png' },
-  { src: 'images/ussop.png' },
-  { src: 'images/zoro.png' },
+  { src: 'images/brook.png', matched: false },
+  { src: 'images/chopper.png', matched: false },
+  { src: 'images/franky.png', matched: false },
+  { src: 'images/luffy.png', matched: false },
+  { src: 'images/nami.png', matched: false },
+  { src: 'images/robin.png', matched: false },
+  { src: 'images/sanji.png', matched: false },
+  { src: 'images/ussop.png', matched: false },
+  { src: 'images/zoro.png', matched: false },
 ];
 
 function App() {
@@ -35,14 +35,20 @@ function App() {
   };
 
   // compare selected cards
-
   useEffect(() => {
     if (firstChoice && secondChoice) {
       if (firstChoice.src === secondChoice.src) {
-        console.log('Match!');
+        setCards((prevCards) => {
+          return prevCards.map((card) => {
+            if (card.src === firstChoice.src) {
+              return { ...card, matched: true };
+            } else {
+              return card;
+            }
+          });
+        });
         reset();
       } else {
-        console.log("Don't match!");
         reset();
       }
     }
