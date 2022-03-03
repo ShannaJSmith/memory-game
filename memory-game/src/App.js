@@ -68,6 +68,7 @@ function App() {
   return (
     <div className="App">
       <h1>Jolly Roger Memory Game</h1>
+      <h5>Can you match all the Straw Hat jolly rogers?</h5>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid">
         {cards.map((card) => (
@@ -82,6 +83,7 @@ function App() {
           />
         ))}
       </div>
+      <p className="turns">Turns: {turns}</p>
     </div>
   );
 }
