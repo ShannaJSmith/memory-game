@@ -49,7 +49,7 @@ function App() {
         });
         reset();
       } else {
-        setTimeout(() => reset(), 1000);
+        setTimeout(() => reset(), 2000);
       }
     }
   }, [firstChoice, secondChoice]);
