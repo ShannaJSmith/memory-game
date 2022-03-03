@@ -4,5 +4,5 @@ https://jollyrogermemory.netlify.app/
 
 ## Future Features:
 
--Make it responsive for mobile
--Add different difficulties
+Make it responsive for mobile
+Add different difficulties
