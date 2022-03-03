@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cards.css';
 
 const Cards = ({ cards }) => {
   return (
@@ -7,7 +8,7 @@ const Cards = ({ cards }) => {
         <div className="card" key={card.id}>
           <div>
             <img className="front" src={card.src} alt="front" />
-            <img className="back" src="images/cover.png" alt="cover" />
+            <img className="back" src="images/cover.png" alt="back" />
           </div>
         </div>
       ))}
