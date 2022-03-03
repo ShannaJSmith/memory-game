@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Cards from './components/Cards';
 
 const images = [
   { src: 'images/brook.png' },
@@ -11,8 +12,6 @@ const images = [
   { src: 'images/sanji.png' },
   { src: 'images/ussop.png' },
   { src: 'images/zoro.png' },
-  { src: 'images/whitebeard.png' },
-  { src: 'images/mihawk.png' },
 ];
 
 function App() {
@@ -28,12 +27,14 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
   };
-  console.log('cards:', cards, 'turns:', turns);
+
+  // console.log('cards:', cards, 'turns:', turns);
 
   return (
     <div className="App">
       <h1>Jolly Roger Memory Game</h1>
       <button onClick={shuffleCards}>New Game</button>
+      <Cards cards={cards} />
     </div>
   );
 }
