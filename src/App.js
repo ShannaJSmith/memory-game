@@ -53,7 +53,7 @@ function App() {
         });
         reset();
       } else {
-        setTimeout(() => reset(), 2000);
+        setTimeout(() => reset(), 1500);
       }
     }
   }, [firstChoice, secondChoice]);

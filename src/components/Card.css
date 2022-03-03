@@ -29,7 +29,7 @@
 .card .back {
   transition: all ease-in 0.5s;
   transition-delay: 0.2s;
-  background: black;
+  background: grey;
 }
 
 .flipped .back {
