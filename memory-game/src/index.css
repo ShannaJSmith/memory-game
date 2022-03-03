@@ -3,8 +3,8 @@
 body {
   margin: 0;
   text-align: center;
-  background: gray;
-  color: white;
+  background: goldenrod;
+  color: rgb(172, 36, 36);
   font-size: 1.5em;
   font-family: 'EB Garamond', serif;
 }

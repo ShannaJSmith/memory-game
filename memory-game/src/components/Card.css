@@ -1,14 +1,26 @@
 .card {
-  border: 2px solid black;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.808);
+  position: relative;
+  margin-bottom: -50px;
+  /* width: 80%; */
 }
 
 .card:hover {
   transform: scale(1.1);
 }
 
-img {
-  max-width: 150px;
+.card img {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+.card .front {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
 }
