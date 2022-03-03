@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import Cards from './components/Cards';
+import Card from './components/Card';
 
 const images = [
   { src: 'images/brook.png' },
@@ -38,7 +38,11 @@ function App() {
     <div className="App">
       <h1>Jolly Roger Memory Game</h1>
       <button onClick={shuffleCards}>New Game</button>
-      <Cards cards={cards} choice={choice} />
+      <div className="card-grid">
+        {cards.map((card) => (
+          <Card key={card.id} card={card} choice={choice} />
+        ))}
+      </div>
     </div>
   );
 }

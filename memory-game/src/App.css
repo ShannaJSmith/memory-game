@@ -17,3 +17,10 @@ button {
 button:hover {
   background: hotpink;
 }
+
+.card-grid {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr 1fr; /* can make it 3 x 4 or 6 x 3 */
+  grid-gap: 20px;
+}
