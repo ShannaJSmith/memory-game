@@ -17,6 +17,7 @@ const images = [
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState(0);
 
   // to shuffle cards:
   const shuffleCards = () => {
@@ -25,12 +26,14 @@ function App() {
       .map((card) => ({ ...card, id: Math.random() }));
 
     setCards(shuffledCards);
+    setTurns(0);
   };
+  console.log('cards:', cards, 'turns:', turns);
 
   return (
     <div className="App">
       <h1>Jolly Roger Memory Game</h1>
-      <button>New Game</button>
+      <button onClick={shuffleCards}>New Game</button>
     </div>
   );
 }
