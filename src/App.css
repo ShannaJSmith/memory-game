@@ -39,3 +39,9 @@ h5 {
 .turns {
   margin-top: 50px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .card-grid {
+    width: 5%;
+  }
+}
