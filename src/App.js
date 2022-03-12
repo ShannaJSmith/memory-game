@@ -33,7 +33,7 @@ function App() {
     setTurns(0);
   };
   // to make a card selection
-  const choice = (card) => {
+  const handleChoice = (card) => {
     firstChoice ? setSecondChoice(card) : setFirstChoice(card);
   };
 
@@ -78,17 +78,18 @@ function App() {
       <h5>Can you match all the Straw Hat jolly rogers?</h5>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid">
-        {cards.map((card) => (
-          <Card
-            key={card.id}
-            card={card}
-            choice={choice}
-            flipped={
-              card === firstChoice || card === secondChoice || card.matched
-            }
-            disabled={disabled}
-          />
-        ))}
+        {cards &&
+          cards.map((card) => (
+            <Card
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={
+                card === firstChoice || card === secondChoice || card.matched
+              }
+              disabled={disabled}
+            />
+          ))}
       </div>
       <p className="turns">Turns: {turns}</p>
     </div>

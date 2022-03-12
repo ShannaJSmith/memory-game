@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ card, choice, flipped, disabled }) => {
+const Card = ({ card, handleChoice, flipped, disabled }) => {
   const handleClick = () => {
     if (!disabled) {
-      choice(card);
+      handleChoice(card);
     }
   };
   return (
