@@ -1,18 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
-
-const images = [
-  { src: 'images/brook.png', matched: false },
-  { src: 'images/chopper.png', matched: false },
-  { src: 'images/franky.png', matched: false },
-  { src: 'images/luffy.png', matched: false },
-  { src: 'images/nami.png', matched: false },
-  { src: 'images/robin.png', matched: false },
-  { src: 'images/sanji.png', matched: false },
-  { src: 'images/ussop.png', matched: false },
-  { src: 'images/zoro.png', matched: false },
-];
+import { images } from './images';
 
 function App() {
   const [cards, setCards] = useState([]);
