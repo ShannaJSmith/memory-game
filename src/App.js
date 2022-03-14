@@ -65,7 +65,13 @@ function App() {
     <div className="App">
       <h1>Jolly Roger Memory Game</h1>
       <h5>Can you match all the Straw Hat jolly rogers?</h5>
-      <button onClick={shuffleCards}>New Game</button>
+      <div className="mode-btns">
+        <button className="difficulty easy">Easy</button>
+        <button className="difficulty hard">Hard</button>
+      </div>
+      <button className="new-game" onClick={shuffleCards}>
+        New Game
+      </button>
       <div className="card-grid">
         {cards &&
           cards.map((card) => (
