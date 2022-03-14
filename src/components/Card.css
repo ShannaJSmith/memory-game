@@ -1,6 +1,7 @@
 .card {
   position: relative;
-  margin-bottom: -50px;
+  /* margin-bottom: -50px; */
+  width: 250px;
 }
 
 .card:hover {
@@ -8,7 +9,7 @@
 }
 
 .card img {
-  width: 100%;
+  width: 50%;
   border: 2px solid white;
   border-radius: 12px;
   padding: 20px;
