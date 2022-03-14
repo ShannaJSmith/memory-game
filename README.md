@@ -4,5 +4,6 @@ https://jollyrogermemory.netlify.app/
 
 ## Future Features:
 
-- Make it responsive for mobile
+- Add game completion modal
 - Add different difficulties
+- Update styling
